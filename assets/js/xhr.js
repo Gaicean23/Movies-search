@@ -47,7 +47,7 @@ inputSearch.addEventListener('keyup', (e) => {
     const searchString = e.target.value;
     if (searchString && searchString.length > 4) if (!triggerMode) clearMoviesMarkup();
 
-    getData(`http://www.omdbapi.com/?s=${searchString}&apikey=546340e7&`)
+    getData(`https://www.omdbapi.com/?s=${searchString}&apikey=546340e7&`)
     .then((movies) => movies.forEach((movie) => addMovieToList(movie)))
     .catch(err => console.log(err));
   }, 1000);
